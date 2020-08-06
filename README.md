@@ -32,10 +32,10 @@
 		if (p > 50) {
 			m = (float) (p-50) * (float) 4.00;
 			quantidade = (float) (p-50);
-			System.out.println ("Você deverá pagar R$ " + m + " em multas. \n" + "Excesso: " + quantidade + " Kilos!");
+			System.out.println ("Você deverá pagar R$ " + m + " em multas. \n" + "Excesso: " + quantidade + " quilos!");
 		}else {
 			m = 0;
-			e = "0 Kilos";
+			e = "0 quilos";
 			System.out.println("Multas: " +m);
 			System.out.println ("Excesso: "+e);
 		}
