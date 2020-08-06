@@ -1,0 +1,33 @@
+package br.com.koda.secao07;
+
+import java.util.Scanner;
+
+public class Exercicio04 {
+
+	public static void main(String[] args) {
+		//variaveis
+		
+		int numero, maior =-999 , menor=999, soma=0;
+		float media;
+		Scanner teclado = new Scanner (System.in);
+		
+		for (int i = 1; i <=10; i++) {
+			System.out.printf ("Digite um valor:%d/10\n ", i);
+			numero = teclado.nextInt();
+			if (numero > maior) {
+				maior = numero;
+			if (numero < menor) {
+				menor = numero;
+			}
+			soma = soma+numero;
+			}else {
+				i--;
+		}
+		}
+		media = soma /10;
+		System.out.println ("O maior valor é: " + maior);
+		System.out.println ("O menor valor é: " + menor);
+		System.out.printf ("A média entre os numeros é:" + media);
+		teclado.close();
+}
+}
