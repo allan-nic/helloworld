@@ -1,0 +1,62 @@
+package br.com.koda.secao07;
+
+import java.util.Scanner;
+
+public class Exercicio07 {
+
+	public static void main(String[] args) {
+		//variaveis
+		
+		int cont_total = 0, cont_1 = 0, cont_2 = 0, cont_3 = 0, cont_4 = 0,
+				identificacao, defeito;
+		Scanner teclado = new Scanner (System.in);
+		
+		//entrada
+		
+		System.out.printf ("Infomrme a identificação do mouse /1000 \n");
+		identificacao = teclado.nextInt();
+		
+		while (identificacao !=0){
+			System.out.println ("1 - Necessita de esfera.");
+			System.out.println ("2 - Necessita de limpeza.");
+			System.out.println ("3 - Necessita troca de cabo/conector.");
+			System.out.println ("4 - Quebrado/Inutilizado.");
+			System.out.println ("Informe o defeito: ");
+			defeito = teclado.nextInt();
+			
+			//processamento
+			
+			if (defeito == 1) {
+				cont_1 = cont_1 + 1;
+			}
+			if (defeito ==2) {
+				cont_2 = cont_2 + 1;
+			}
+			if (defeito == 3) {
+				cont_3 = cont_3 + 1;
+			}
+			if (defeito ==4) {
+				cont_4 = cont_4 + 1;
+			}
+			cont_total = cont_total +1;
+			
+			//entradas
+			System.out.println ("Informe a identificação: ");
+			identificacao = teclado.nextInt();	
+		}
+		float p1,p2,p3,p4;
+		p1 = ((float) cont_1 / (float) cont_total) * (float) 100.00;
+		p2 = ((float) cont_2 / (float) cont_total) * (float) 100.00;
+		p3 = ((float) cont_3 / (float) cont_total) * (float) 100.00;
+		p4 = ((float) cont_4 / (float) cont_total) * (float) 100.00;
+		
+		System.out.printf("Quantidade de mouses %d\n", cont_total);
+		System.out.printf("Situacao \t\t quantidade \tPercentual \n");
+		System.out.printf("1- Esfera \t \t\t%d \t%.2f \n", cont_1, p1);
+		System.out.printf("2- Limpeza \t \t\t%d \t%.2f \n", cont_2, p2);
+		System.out.printf("3- Troca cabo \t \t\t%d \t%.2f \n", cont_3, p3);
+		System.out.printf("4- Quebrado \t\t \t%d \t%.2f \n", cont_4, p4);
+		teclado.close();
+	}
+
+}
