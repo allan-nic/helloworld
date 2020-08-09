@@ -8,9 +8,10 @@
  3 | Python
  
  
- ~Teste~
+ ~Testes~
  
  - [x] Listar a lógica de um programa.
+ - [] Subir um site de testes.
  
  ```
  
